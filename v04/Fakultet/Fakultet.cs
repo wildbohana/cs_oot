@@ -25,7 +25,7 @@ namespace ConsoleApp1
             string[] studentiTxt = text.Split(';');
 
             // foreach(string red in studentiTxt)
-			for (int i = 0; i < studentiTxt.Count() - 1; i++)
+	    for (int i = 0; i < studentiTxt.Count() - 1; i++)
             {
                 try
                 {
@@ -71,23 +71,23 @@ namespace ConsoleApp1
             }
         }
 
-		// redefinisati metodu ToString
-		public override string ToString() 
+	// redefinisati metodu ToString
+	public override string ToString() 
+	{
+		string str = "";
+
+		str += "========================================\n";
+		str += "\tFakultet Tehničkih Nauka\t\n";
+		str += "========================================\n\n";
+
+		foreach (Student s in studenti)
 		{
-			string str = "";
-
-			str += "========================================\n";
-			str += "\tFakultet Tehničkih Nauka\t\n";
-			str += "========================================\n\n";
-
-			foreach (Student s in studenti)
-			{
-				str += s.ToString();
-				str += "\n";
-			}
-			
-			return str;
+			str += s.ToString();
+			str += "\n";
 		}
+
+		return str;
+	}
 
     }
 }
