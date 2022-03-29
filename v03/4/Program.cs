@@ -18,9 +18,9 @@ namespace Z4
         {
             Osoba o = new Osoba("Marko", "Markovic");
             string filePath = "Object.raw"; 
-			// može i druga fajl ekstenzija
-			// ovo je relativna putanja (project > bin > Debug)
-			// može i apsolutna: "C:\\Object.raw"
+	    // može i druga fajl ekstenzija
+	    // ovo je relativna putanja (project > bin > Debug)
+	    // može i apsolutna: "C:\\Object.raw"
 
             Console.WriteLine("Upis osobe u datoteku...");
             Snimi(filePath, o); 
@@ -33,7 +33,7 @@ namespace Z4
             if (osoba != null)
 			{
 				// da vidimo da li je učitavanje dobro urađeno
-                Console.WriteLine(osoba);		
+                		Console.WriteLine(osoba);		
 			}
 
 
@@ -64,7 +64,7 @@ namespace Z4
 
             for (int i = 0; i < redovi; i++) 
 			{
-                text.Add(Console.ReadLine());  
+                		text.Add(Console.ReadLine());  
 			}
 
             string filePathText = "Text.txt";
@@ -80,25 +80,25 @@ namespace Z4
 
             for (int i = 0; i < textProcitan.Count; i++)
 			{
-                Console.WriteLine(textProcitan[i]);
+                		Console.WriteLine(textProcitan[i]);
 			}
 
-			Console.ReadLine();
-        }
+	    Console.ReadLine();
+	}
 
-		// kraj main-a
+	// kraj main-a
 
 
-		// metode za rad sa datotekama - binarno
+	// metode za rad sa datotekama - binarno
 
         public static void Snimi(string file, Osoba o)
         {
-			// za serijalizaciju
+	    // za serijalizaciju
             BinaryFormatter bf = new BinaryFormatter(); 	
 
             try
             {
-				// path - relativna ili apsolutna putanja
+		// path - relativna ili apsolutna putanja
                 FileStream fs = new FileStream(file, FileMode.Create, FileAccess.Write);  
                 bf.Serialize(fs, o);
 
@@ -122,13 +122,13 @@ namespace Z4
                 {
                     FileStream fs = new FileStream(file, FileMode.Open, FileAccess.Read);
                     osoba = (Osoba)bf.Deserialize(fs); 
-					// ili osoba = bf.Deserialize(fs) as Osoba; 
-					// as vrаća null ako ne uspe; direct cast generiše izuzetak
+		    // ili osoba = bf.Deserialize(fs) as Osoba; 
+		    // as vrаća null ako ne uspe; direct cast generiše izuzetak
                     fs.Close();
                 }
                 catch (Exception) 	
                 {
-					// ako ne želimo da ispišemo detelje o grešci nije nam potreban objekat e
+		    // ako ne želimo da ispišemo detelje o grešci nije nam potreban objekat e
                     Console.WriteLine("Greška prilikom čitanja");     
                 }
             }
@@ -136,7 +136,7 @@ namespace Z4
         }
 
 
-		// metode za rad sa datotekama - tekst
+	// metode za rad sa datotekama - tekst
 
         public static void SnimiText(string file, List<string> text)
         {
