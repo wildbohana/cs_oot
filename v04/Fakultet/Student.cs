@@ -32,7 +32,7 @@ namespace ConsoleApp1
         // prazan konstrutkor
         public Student() : base()
         {
-			// da li mi fali nešto ovde ?
+	    // da li mi fali nešto ovde ?
         }
 
         // redefinisati metodu ToString
