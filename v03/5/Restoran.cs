@@ -9,12 +9,12 @@ namespace Z5
 {
     class Restoran
     {
-		// polja + vežba lmao
+	// polja + vežba lmao
         private string naziv;
         private string adresa;
         private List<Stavka> jelovnik;   // za vezbu uraditi zadatak koriscenjem recnika
 
-		// properties
+	// properties
         public string Naziv
         {
             get { return naziv; }
@@ -27,7 +27,7 @@ namespace Z5
             set { adresa = value; }
         }
 
-		// konstruktor
+	// konstruktor
         public Restoran(string naziv, string adresa)
         {
             Naziv = naziv;
@@ -36,7 +36,7 @@ namespace Z5
             jelovnik = new List<Stavka>();
         }
 
-		// unos iz datoteke (tekstualne)
+	// unos iz datoteke (tekstualne)
         public void Import(string file)
         {
             StreamReader sr = null;
@@ -51,18 +51,18 @@ namespace Z5
                 // petlja za kreiranje stavki (u fajlu je jedan red - jedna stavka)
                 while ((linija = sr.ReadLine()) != null)
                 {
-                    //razdvajanje po delimiteru |
-                    string[] lineParts = linija.Split('|');
+                	//razdvajanje po delimiteru |
+                	string[] lineParts = linija.Split('|');
 
-                    naziv = lineParts[0];
-                    cena = Double.Parse(lineParts[lineParts.Length - 2]); 
-					// ili lineParts[1], ovde je kao primer dato kako da se pristupi nekom elementu sa kraja
+                	naziv = lineParts[0];
+                	cena = Double.Parse(lineParts[lineParts.Length - 2]); 
+			// ili lineParts[1], ovde je kao primer dato kako da se pristupi nekom elementu sa kraja
 
-                    if (! NazivStavkePostoji(naziv)) 
-					{
-                        jelovnik.Add(new Stavka(naziv, cena));
-					}
-                }
+                	if (! NazivStavkePostoji(naziv)) 
+			{
+                        	jelovnik.Add(new Stavka(naziv, cena));
+			}
+            	}
             }
             catch (Exception e) 
             {
@@ -72,13 +72,13 @@ namespace Z5
             finally
             {
                 if (sr != null) 
-				{
+		{
                     sr.Close();
                 }
             }
         }
 
-		// sortiranje - homemade
+	// sortiranje - homemade
         public void Sort()
         {
             Stavka tempI, tempJ;
@@ -99,15 +99,15 @@ namespace Z5
             }
         }
 
-		/* - sortiramo cene koristeći ugrađeni Sort
+	/* - sortiramo cene koristeći ugrađeni Sort
         public void Sortiraj()
         {
             jelovnik.Sort((s1, s2) => s1.Cena.CompareTo(s2.Cena));
             jelovnik.Reverse();
         }
-		*/
+	*/
 
-		// čuvanje u fajl (tekstualni)
+	// čuvanje u fajl (tekstualni)
         public void Export(string file)
         {
             StreamWriter sw = null;
@@ -124,13 +124,14 @@ namespace Z5
             }
         }
 
-		// ispis
+	// ispis
         public override string ToString()
         {
-			// escape sequence za "" je \" (posle \ ide ")
+	    // escape sequence za "" je \" (posle \ ide ")
             string str = "Restoran \"" + naziv + "\".\n"; 
             str += "Adresa: " + adresa + "\n\n";
-            if (jelovnik.Count == 0)
+            
+	    if (jelovnik.Count == 0)
             {
                 str += "Jelovnik je prazan";
             }
