@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EvidencijaZaposlenih
 {
-	// interfejsi se implementiraju
+    // interfejsi se implementiraju
     class EvidencijaZaposlenih : Izvestaj
 	{
 		// polja
