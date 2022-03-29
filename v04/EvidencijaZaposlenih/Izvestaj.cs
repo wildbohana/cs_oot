@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EvidencijaZaposlenih
 {
-	// interfejs - ne implementiraš ništa ovde
+    // interfejs - ne implementiraš ništa ovde
     interface Izvestaj
     {
         int Plata(int id);
