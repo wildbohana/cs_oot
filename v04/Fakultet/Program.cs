@@ -17,10 +17,10 @@ namespace ConsoleApp1
             Fakultet f = new Fakultet();
             f.UpisiStudente(text);
 
-			f.SortirajStudente();
+	    f.SortirajStudente();
 
-			string upis = "Sortirani.txt";
-			SaveToFile(f.ToString(), upis);
+	    string upis = "Sortirani.txt";
+	    SaveToFile(f.ToString(), upis);
 			
             Console.ReadLine();
         }
@@ -58,7 +58,7 @@ namespace ConsoleApp1
             try
             {
                 sw = new StreamWriter(string2);
-		    sw.WriteLine(string1);
+		sw.WriteLine(string1);
                 sw.Close();
             }
             catch (Exception e)
