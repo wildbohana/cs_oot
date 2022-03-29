@@ -58,7 +58,7 @@ namespace ConsoleApp1
             try
             {
                 sw = new StreamWriter(string2);
-				sw.WriteLine(string1);
+		    sw.WriteLine(string1);
                 sw.Close();
             }
             catch (Exception e)
