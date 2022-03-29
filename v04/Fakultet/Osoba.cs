@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class Osoba
     {
-		// polja
+	// polja
         private string ime;
         private string prezime;
 
@@ -23,7 +23,7 @@ namespace ConsoleApp1
             Prezime = "";
         }
 
-		// konstruktor sa parametrima
+	// konstruktor sa parametrima
         public Osoba(string ime, string prezime)
         {
             Ime = ime;
