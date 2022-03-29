@@ -8,11 +8,11 @@ namespace Z5
 {
     class Stavka
     {
-		// polja
+	// polja
         private string naziv;
         private double cena;
 
-		// properties
+	// properties
         public string Naziv
         {
             get { return naziv; }
@@ -25,14 +25,14 @@ namespace Z5
             set { cena = value; }
         }
 
-		// konstruktor
+	// konstruktor
         public Stavka(string naziv, double cena)
         {
             Naziv = naziv;
             Cena = cena;
         }
 
-		// ispis
+	// ispis
         public override string ToString()
         {
             return Naziv + " " + Cena;
