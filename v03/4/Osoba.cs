@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace Z4
 {
-	// da li je Serializable interfejs ili sam ja pogrešno razumela profesora
-
     [Serializable]		// atribut koji omogucava serijalizaciju objekta
     class Osoba
     {
-		// polja
+	// polja
         private string ime;
         private string prezime;
 
-		// properties
+	// properties
         public string Ime
         {
             get { return ime; }
@@ -28,14 +26,14 @@ namespace Z4
             set { prezime = value; }
         }
 
-		// konstruktor
+	// konstruktor
         public Osoba(string ime, string prezime)
         {
             Ime = ime;
             Prezime = prezime;
         }
 
-		// ispis
+	// ispis
         public override String ToString()
         {
             return "Osoba [ime=" + Ime + ", prezime=" + Prezime + "]";
