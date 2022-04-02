@@ -8,8 +8,7 @@ namespace ConsoleApp1
 {
     class Student : Osoba
     {
-        // polja
-        private Osoba osoba;
+        // polja - samo ova 3, Osoba jeste uključena u Studenta, ali nije polje
         private string smer;
         private int brIndeksa;
         private int godinaUpisa;
