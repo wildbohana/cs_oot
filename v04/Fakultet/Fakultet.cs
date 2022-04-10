@@ -9,7 +9,7 @@ namespace ConsoleApp1
     class Fakultet
     {
         // polja
-        private List<Student> studenti = new List<Student>();
+        private List<Student> studenti;
 
         // prazan konstruktor
         public Fakultet()
