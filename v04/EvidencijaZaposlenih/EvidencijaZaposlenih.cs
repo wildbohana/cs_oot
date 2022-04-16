@@ -89,7 +89,7 @@ namespace EvidencijaZaposlenih
 
 		public Zaposleni NajboljiRadnik()
 		{
-			Zaposleni najbolji = zaposleni[1];
+			Zaposleni najbolji = zaposleni[zaposleni.Keys.Min()];
 			foreach (int id in zaposleni.Keys)
 			{
 				if (Plata(id) > (Plata(najbolji.Id)))
