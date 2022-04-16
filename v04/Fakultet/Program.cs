@@ -39,12 +39,15 @@ namespace ConsoleApp1
                 {
                     povratnaVrednost += linija;
                 }
-                sr.Close();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+	    finally 
+	    {
+                sr.Close();
+	    }
 
             return povratnaVrednost;
         }
@@ -59,12 +62,15 @@ namespace ConsoleApp1
             {
                 sw = new StreamWriter(string2);
 		sw.WriteLine(string1);
-                sw.Close();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
+	    finally
+	    {
+	    	sw.Close();
+	    }
         }
 
     }
