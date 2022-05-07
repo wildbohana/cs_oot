@@ -1,0 +1,75 @@
+Svaki element može da ima u sebi Name="ImeElementa" preko kog mu se lakše pristupa u cs fajlu
+
+Content, Text - UI sloj koji se prikazuje, nemaju ga svi elementi
+DataContext - data sloj, imaju ga svi elementi
+(ako sam dobro skontala, drugačije im se pristupa u cs fajlu)
+
+<Border> 
+- ivica prozora (onog elementa iznad kog se postavi u xaml-u)
+- Padding="3" - unutrašnja ivica oko granice (znaš valjda na šta mislim)
+- Background="#f0f0f0" - boja celog prozora
+
+<Grid>
+- mreža, ima kolone i redove
+- <Grid.ColumnDefinitions> <ColumnDefinition/> </Grid.ColumnDefinitions>
+- <Grid.RowDefinitions> <RowDefinition/> </Grid.RowDefinitions>
+- u RowDefinition i ColumnDefiniton možemo staviti Width="*" i Height="*"
+
+- pozicioniranje elemenata u Grid-u preko Grid.Row="0" Grid.Column="1"
+- jedan element preko više ćelija - Grid.ColumnSpan="2"
+- Margin="10 10 10 10" - spoljašnja ivica oko same ćelije u Grid-u sa neke od 4 strane
+
+<StackPanel>
+- ima samo redove/kolone
+- Orientation="Horizontal" - sa levo na desno (a ne od gore do dole koje je default vrednost)
+- osim toga nema ništa bitno od propertija
+- u redu može biti TextBlock ili Button, može biti još jedan StackPanel, može čak i Grid
+- dobar je kombo u StackPanel da zajedno staviš TextBlock i TextBox
+
+<TextBlock>
+- služi samo za ispis teksta
+- osobine teksta: Text="šta će pisati" FontSize="30" HorizontalAlignment="Right" FontWeight="Bold" ...
+
+<Button>
+- dugme koje reaguje na interakciju sa njim (event)
+- Click="new_event", događaj na koji će dugme da reaguje, redefinišeš u cs-u
+- DataContext="bilo šta" - ne prikazuje se 
+- između <></> možeš da staviš šta želiš da prikažeš, i te dve vrednosti (ovo i DataContext) ne moraju da budu iste
+- Content="bilo šta" - prikazuje se (kombinacija prethodna dva) 
+- Button klasa nema Text property, ima samo Content
+
+<TextBox>
+- služi za unos/ispis teksta
+- stavi neki naziv u Name, trebaće ti kasnije u cs-u
+- ima sve normalne osobine poput Padding, Background, Margin...
+- podrazumevano ima belu boju (ako želiš providno, imaš "Transparent" opciju
+
+- IsReadOnly - može samo da se čita
+- IsEnabled - zaključaš/otključaš element (korisnik (ne)može da koristi element)
+
+<PasswordBox>
+- sličan je TextBox-u, ali nema Text nego Password
+- ne prikazuje se uneti tekst nego tačke
+- osim toga je sve isto
+
+<ComboBox>
+- stavi Name za lakši pristup u cs-u
+- događaj za CB je SelectionChanged="ime_dogadjaja"
+- sa <ComboBoxItem>Opcija1</ComboBoxItem> definišeš jedan element opadajuće liste
+- ComboBox.SelectedIndex - indeks izabranog iz opadajuće liste (kreće od 0) (-1 ako ništa nije izabrano)
+- ComboBox.SelectedItem.ToString() - tekst koji je izabran iz ComboBox-a
+
+<CheckBox>
+- možeš izabrati više ponuđenih kućica
+- sa <CheckBox Name="CB1">D</CheckBox> definišeš jednu kućicu
+- ne treba ti ništa iznad toga (za razliku od ComboBox-a npr)
+
+<RadioButton>
+- možeš izabrati samo 1 od ponuđenih kružića
+- sa <RadioButton Name="RB1">A</RadioButton> definišeš jedno kružno dugme
+- ne treba ti ništa iznad toga (za razliku od ComboBox-a npr)
+
+<Label>
+- ne znam, kasnije će se koristiti valjda
+- ima iste propertije kao i TextBlock
+- Content="Šta želiš da prikažeš"
