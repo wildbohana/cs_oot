@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+		
+    <Border Padding="3" Background="#f0f0f0">
+
+        <Grid>
+            <!-- Grid.Column i Grid.Row nam služe za pravljenje mreže -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- TextBlock samo ispisuje tekst -->
+            <TextBlock x:Name="rezultat" 
+                   Grid.Row="0" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="5" 
+                   Text="0" 
+                   FontSize="40" 
+                   HorizontalAlignment="Right" 
+                   VerticalAlignment="Bottom">
+            </TextBlock>
+
+            <!-- Button reaguje na interakciju sa njim (na događaje) -->
+            <Button Grid.Row="1" Grid.Column="0" DataContext="1" FontSize="30" Click="Klik1">1</Button>
+            <Button Grid.Row="1" Grid.Column="1" DataContext="2" FontSize="30" Click="Klik1">2</Button>
+            <Button Grid.Row="1" Grid.Column="2" DataContext="3" FontSize="30" Click="Klik1">3</Button>
+            <Button Grid.Row="1" Grid.Column="3" DataContext="%" FontSize="30" Click="Procenat">%</Button>
+            <Button Grid.Row="1" Grid.Column="4" DataContext="AC" FontSize="30" Click="Rst">AC</Button>
+
+            <Button Grid.Row="2" Grid.Column="0" DataContext="4" FontSize="30" Click="Klik1">4</Button>
+            <Button Grid.Row="2" Grid.Column="1" DataContext="5" FontSize="30" Click="Klik1">5</Button>
+            <Button Grid.Row="2" Grid.Column="2" DataContext="6" FontSize="30" Click="Klik1">6</Button>
+            <Button Grid.Row="2" Grid.Column="3" DataContext="*" FontSize="30" Click="Zvezda">*</Button>
+            <Button Grid.Row="2" Grid.Column="4" DataContext="/" FontSize="30" Click="Kosa">/</Button>
+
+            <Button Grid.Row="3" Grid.Column="0" DataContext="7" FontSize="30" Click="Klik1">7</Button>
+            <Button Grid.Row="3" Grid.Column="1" DataContext="8" FontSize="30" Click="Klik1">8</Button>
+            <Button Grid.Row="3" Grid.Column="2" DataContext="9" FontSize="30" Click="Klik1">9</Button>
+            <Button Grid.Row="3" Grid.Column="3" DataContext="+" FontSize="30" Click="Plus">+</Button>
+            <Button Grid.Row="3" Grid.Column="4" DataContext="-" FontSize="30" Click="Minus">-</Button>
+
+            <Button Grid.Row="4" Grid.Column="0" DataContext="0" FontSize="30" Click="Klik1">0</Button>
+            <Button Grid.Row="4" Grid.Column="1" DataContext="." FontSize="30" Click="Tacka">.</Button>
+            <Button Grid.Row="4" Grid.Column="2" DataContext="-" FontSize="30" Click="Znak">+/-</Button>
+            <Button Grid.Row="4" Grid.Column="3" DataContext="=" FontSize="30" Click="Jednako" Grid.ColumnSpan="2">=</Button>
+        </Grid>
+        
+    </Border>
+</Window>
