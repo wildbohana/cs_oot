@@ -141,7 +141,7 @@ namespace research_lmao
             }
             else
             {
-                MessageBox.Show("Lozinka je uspesno kreirana!", "Dobra lozinka", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Lozinka je uspesno kreirana!", "Dobra lozinka", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                 this.Lozinka.IsEnabled = false;
             }
         }
