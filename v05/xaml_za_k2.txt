@@ -71,5 +71,5 @@ DataContext - data sloj, imaju ga svi elementi
 
 <Label>
 - ne znam, kasnije će se koristiti valjda
-- ima iste propertije kao i TextBlock
+- ima iste propertije kao i TextBox
 - Content="Šta želiš da prikažeš"
