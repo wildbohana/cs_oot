@@ -62,6 +62,5 @@ namespace WpfApp2
 	            this.Broj.Text = this.brojac.ToString();
 			}
         }
-
     }
 }
