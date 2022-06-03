@@ -26,19 +26,6 @@ namespace WpfApp3
         }
 
         private static int counter = 0;
-		
-		// public static int Counter { get => counter; set => counter = value; }
-        
-		// može se dodati i Property za ovo polje, ali nije neophodno
-        // radi sve dok se ne koristi this.counter, onda se buni
-
-		// iz nekog razloga ovo ne radi -> samo counter u definiciji inicijalizuj na 0 i tjt
-        /*
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.counter = 0;
-        }
-        */
 
         private void Izgenerisi_Click(object sender, RoutedEventArgs e)
         {
@@ -169,6 +156,5 @@ namespace WpfApp3
             // osim indeksa, možemo dobiti i tekst koji je izabran iz ComboBox-a
             // ComboBox.selectedItem.ToString() - tekst koji je izabran iz cb
         }
-
     }
 }
