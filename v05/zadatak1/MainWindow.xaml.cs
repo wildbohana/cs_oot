@@ -143,6 +143,5 @@ namespace WpfApp1
             if (rezultat.Text.IndexOf('.') < 0)
                 rezultat.Text += ".";
         }
-
     }
 }
