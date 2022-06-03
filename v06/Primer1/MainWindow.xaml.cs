@@ -23,7 +23,6 @@ namespace WpfResursi
         public MainWindow()
         {
             InitializeComponent();
-			
             this.Resources["ButtonDynamicBackgroundColor"] = new SolidColorBrush(Colors.LightGoldenrodYellow);
         }
     }
