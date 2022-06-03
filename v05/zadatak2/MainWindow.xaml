@@ -9,7 +9,7 @@
     
     <Border Padding="10">
         <StackPanel>
-            <TextBlock Text="Podaci o korisniku:" FontWeight="Bold" FontStyle="Italic" Margin="0 10" />
+            <TextBlock Text="Podaci o korisniku:" FontWeight="Bold" FontStyle="Italic" Margin="0 10 0 10" />
 
             <StackPanel>
                 <TextBlock Text="Ime:" />
